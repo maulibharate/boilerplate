@@ -3,7 +3,7 @@ const app = express();
 const cookieParsere = require('cookie-parser');
 const result = require('dotenv').config();
 
-const PORT = process.env.SERVER_PORT || 8090
+const PORT = process.env.PORT || 8090
 
 
 if (result.error) {
