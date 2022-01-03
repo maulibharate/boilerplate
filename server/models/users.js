@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+const secretKey = process.env.JWT_SECRET_KEY;
+
 const userSchema = new mongoose.Schema({
     firstName: {
         type: String,
@@ -57,7 +59,7 @@ userSchema.pre('save', async function (next) {
 
 // genrate web token
 userSchema.methods.genreateWebToken = async function() {
-    const token = jwt.sign({ _id:this._id }, 'boilerPlateMadeByMauliBharate');
+    const token = jwt.sign({ _id:this._id }, secretKey);
     this.tokens = this.tokens.concat({ token: token });
     await this.save();
     return token;
