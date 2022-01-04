@@ -4,7 +4,7 @@
 
 * MongoDb and Mongoose - MongoDb as a Database and mongoose as as a Object Data - Modeling library for MongoDB and Node.js.
 * Express - as a backend Framework.
-* React - as a Frontend Framework.
+* [React](https://facebook.github.io/react/) - as a Frontend Framework.
 * Node - as a Server.
 * Redux - for state Management (will be updated).
 * JsonWebToken - for creating JSON-based access tokens.
